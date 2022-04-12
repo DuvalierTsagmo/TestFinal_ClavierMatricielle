@@ -6,11 +6,9 @@
   Version    : 0.0.1
 */
 
-
 #include <Arduino.h>
 #include <Keypad.h>
 #include <Wire.h>
-
 
 #define ROWS 4
 #define COLS 4
@@ -37,7 +35,8 @@ void loop()
     // choix de la LED
     boutton = kp4x4.getKey();
 
-    if (boutton) {
+    if (boutton)
+    {
         Serial.println(boutton);
         // Envoie de la lettre à l'autre uC
         Wire.beginTransmission(7);
